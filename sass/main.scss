@@ -1,0 +1,20 @@
+@import "./utils/variables.scss";
+@import "./base/base-style";
+@import "./components/header/_logo.scss";
+@import "./components/header/_nav-header.scss";
+@import "./components/header/_contact-header.scss";
+@import "./components/main/overley-main";
+@import "./components/main/work-examples";
+@import "./components/main/skills-main";
+@import "./components/main/our-team";
+@import "./components/main/egular-customers";
+@import "./components/footer/footer-logo";
+@import "./components/footer/footer-address";
+@import "./components/footer/network-footer";
+@import "./components/footer/form-foter";
+// сторінка портфолио//
+@import "./components/portfolio/portfolio-main-btn";
+@import "./components/portfolio/portfolio-cards";
+//backdrop//
+@import "./components/backdrop/modal-backdrop";
+@import "./components/backdrop/form-backdrop";
