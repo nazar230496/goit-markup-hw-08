@@ -1,0 +1,146 @@
+.header {
+  position: relative;
+  background-color: $primary-bgcolor;
+  border-bottom: 1px solid #ececec;
+  margin: 0 auto;
+}
+.header-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width:768px) {
+    display: flex;
+  }
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+
+  @media screen and (min-width: 768px) {
+    min-height: 80px;
+  }
+}
+.header-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-list__link {
+  color: $text-color;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+}
+.header-list__link--active {
+  position: relative;
+  color: $active-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+    background: $active-color;
+    border-radius: 2px;
+  }
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+ @media screen and (max-width: 767px) {
+   display: none;
+ }
+ @media screen and (min-width: 768px) and (max-width: 1199px) {
+  flex-direction: column;
+ }
+}
+.contacts__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+    &:first-child {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-right: 50px;
+      }
+    }
+
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts__link {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  color: $contacts-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1199px) {
+  .contacts__link-mail {
+    padding-top: 19px;
+  }
+
+  .contacts__link-phone {
+    padding-bottom: 19px;
+  }
+}
+
+.contacts__icon {
+  display: inline-flex;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts__mail {
+  width: 16px;
+  height: 12px;
+
+  @media screen and (max-width: 1199px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.contacts__phone {
+  width: 10px;
+  height: 16px;
+
+  @media screen and (max-width: 1199px) {
+    height: 14px;
+  }
+}

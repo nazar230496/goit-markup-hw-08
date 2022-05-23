@@ -1,0 +1,60 @@
+.skills {
+    display: none;
+
+    @media screen and (min-width:1200px) {
+        display: block;
+        padding-bottom: 94px;
+        background-color: $primary-bgcolor;
+
+        &__input {
+            position: relative;
+        }
+    }
+}
+
+.skills__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.skills__images {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 370px;
+    margin-right: 30px;
+}
+
+.skills__images--nospace {
+    margin-right: 0;
+}
+
+.skills__description {
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+
+    bottom: 0;
+}
+
+.skills__text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
