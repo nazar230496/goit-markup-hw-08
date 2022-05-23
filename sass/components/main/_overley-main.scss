@@ -1,9 +1,10 @@
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.overlay {
+.hero {
     max-width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -21,7 +22,7 @@
     text-align: center;
 }
 
-.overlay__title {
+.hero__title {
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -31,7 +32,7 @@
     color: var(--second-text-color);
 }
 
-.overlay__btn {
+.hero__btn {
     display: inline-block;
     border: transparent;
     text-align: center;

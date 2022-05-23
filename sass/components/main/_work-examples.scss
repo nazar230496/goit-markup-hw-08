@@ -1,4 +1,4 @@
-// .details__icon {
+// .details__div {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
@@ -8,7 +8,7 @@
 //     border-radius: 4px;
 // }
 
-// .details__list {
+// .details {
 //     display: flex;
 //     flex-wrap: wrap;
 
@@ -18,15 +18,15 @@
 //     color: var(--primery-text-color);
 // }
 
-// .details__list .iteam {
+// .details .iteam {
 //     max-width: 270px;
 // }
 
-// .details__list .iteam+.iteam {
+// .details .iteam+.iteam {
 //     margin-left: 30px;
 // }
 
-// .details__subtitle {
+// .details__title {
 //     margin-bottom: 10px;
 //     font-weight: 700;
 //     font-size: 14px;

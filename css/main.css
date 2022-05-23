@@ -102,7 +102,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-.header__logo {
+.logo {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
@@ -115,7 +115,7 @@ img {
   color: var(--accent-color);
 }
 
-.header__logo--accent {
+.logo__accent {
   color: var(--logo-color);
 }
 
@@ -146,7 +146,7 @@ img {
   padding-bottom: 94px;
 }
 
-.overlay {
+.hero {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -162,7 +162,7 @@ img {
   text-align: center;
 }
 
-.overlay__title {
+.hero__title {
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -172,7 +172,7 @@ img {
   color: var(--second-text-color);
 }
 
-.overlay__btn {
+.hero__btn {
   display: inline-block;
   border: transparent;
   text-align: center;
@@ -188,12 +188,12 @@ img {
   background: var(--accent-color);
 }
 
-.skills {
+.section--no-padding-top {
   padding-top: 0px;
   text-align: center;
 }
 
-.skills__title {
+.section__title {
   text-align: center;
   margin-bottom: 50px;
   font-weight: 700;
@@ -203,17 +203,17 @@ img {
   color: var(--title-text-color);
 }
 
-.skills__list {
+.skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.skills__list .iteam + .iteam {
+.skills .skills__input + .skills__input {
   margin-left: 30px;
 }
 
-.skills__iteam {
+.skills__input {
   position: relative;
 }
 
@@ -226,6 +226,7 @@ img {
 }
 
 .skills__description {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,7 +236,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
   background: rgba(47, 48, 58, 0.8);
   width: 100%;
   height: 70px;
@@ -243,12 +243,12 @@ img {
   left: 0;
 }
 
-.team {
+.section--background {
   background: #F5F4FA;
   text-align: center;
 }
 
-.team__title {
+.section__title {
   text-align: center;
   margin-bottom: 50px;
   font-weight: 700;
@@ -258,7 +258,7 @@ img {
   color: var(--title-text-color);
 }
 
-.team__list {
+.team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,16 +271,16 @@ img {
   background-color: #FFFFFF;
 }
 
-.team__list .iteam + .iteam {
+.team .iteam + .iteam {
   margin-left: 30px;
 }
 
-.team__desc {
+.team__box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team__subtitle {
+.team__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -296,7 +296,7 @@ img {
   color: var(--primery-text-color);
 }
 
-.team__networks {
+.networks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +309,7 @@ img {
   margin-top: 16px;
 }
 
-.team__networks--link {
+.networks__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,16 +327,16 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team__networks--link:hover, .team__networks--link:focus {
+.networks__link:hover, .networks__link:focus {
   background: var(--accent-color);
   fill: #FFFFFF;
 }
 
-.team__networks .team__networks--list + .team__networks--list {
+.networks .networks__item + .networks__item {
   margin-left: 10px;
 }
 
-.clients__title {
+.section__title {
   text-align: center;
   margin-bottom: 50px;
   font-weight: 700;
@@ -346,7 +346,7 @@ img {
   color: var(--title-text-color);
 }
 
-.clients__list {
+.clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,7 +382,7 @@ img {
   border-color: var(--accent-color);
 }
 
-.clients__list .clients__iteam + .clients__iteam {
+.clients .clients__iteam + .clients__iteam {
   margin-left: 30px;
 }
 
@@ -669,6 +669,12 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-cards__link:hover .produck-overlay,
+.portfolio-cards__link:focus .produck-overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .portfolio-cards__flowing-text {
   text-align: center;
   padding: 63px 24px;
@@ -684,12 +690,6 @@ img {
       flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
-}
-
-.portfolio-cards__element:hover .produck-overlay,
-.portfolio-cards__element:focus .produck-overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .portfolio-cards__link {
@@ -739,6 +739,7 @@ img {
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
